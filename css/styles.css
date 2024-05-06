@@ -1,0 +1,43 @@
+:root {
+  /* Colors */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --Light-slate-blue: hsl(252, 100%, 67%); /* bacground gradient */
+  --light-royal-blue: hsl(241, 81%, 54%); /* background gradient */
+  --violet-blue: hsla(256, 72%, 46%, 1); /* circle */
+  --persian-blue: hsla(241, 72%, 46%, 0); /* circle */
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --light-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("/assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format(".ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  background: var(--cream);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+}
