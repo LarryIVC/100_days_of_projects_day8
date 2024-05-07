@@ -58,7 +58,7 @@ main {
 h1 {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--light-gray-blue);
+  color: var(--pale-blue);
   text-align: center;
 }
 
@@ -197,10 +197,11 @@ ul {
 }
 
 footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   background: var(--green-teal);
   width: 100%;
+  opacity: 0.8;
 }
 
 @media screen and (min-width: 768px) {
