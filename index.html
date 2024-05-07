@@ -3,35 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/index.js" defer></script>
     <title>Results Summary Component - Frontend Club</title>
   </head>
   <body>
+    <!-- <h1>Results Summary Component<br>Frontend Club</h1> -->
     <main>
-      <h1>Results Summary Component - Frontend Club</h1>
-      <article>
-        <h2>Your Result</h2>
+      <article class="score-container">
+        <h3>Your Result</h3>
         <div class="score">
-          <span>76</span>
-          <span>of 100</span>
+          <span class="score-total">76</span>
+          <span class="score-legend">of 100</span>
         </div>
         <h2>Great</h2>
         <p>
           You scored higher than 65% of the people who have taken these tests.
         </p>
       </article>
-      <article>
+      <article class="summary-container">
         <h2>Summary</h2>
-        <ul>
+        <ul id="summary-list">
           <li>
             <div class="literal">
               <img
                 src="assets/images/icon-reaction.svg"
                 alt="Icon relevant of the score"
-              />
+              /><span>Reaction</span>
             </div>
             <div class="numeral">
-              <span><strong>80</strong></span
-              >/100
+              <span><strong>80</strong> </span><span class="light">/ 100</span>
             </div>
           </li>
           <li>
@@ -39,11 +40,10 @@
               <img
                 src="assets/images/icon-reaction.svg"
                 alt="Icon relevant of the score"
-              />
+              /><span>Reaction</span>
             </div>
             <div class="numeral">
-              <span><strong>80</strong></span
-              >/100
+              <span><strong>80</strong> </span><span class="light">/ 100</span>
             </div>
           </li>
           <li>
@@ -51,11 +51,10 @@
               <img
                 src="assets/images/icon-reaction.svg"
                 alt="Icon relevant of the score"
-              />
+              /><span>Reaction</span>
             </div>
             <div class="numeral">
-              <span><strong>80</strong></span
-              >/100
+              <span><strong>80</strong> </span><span class="light">/ 100</span>
             </div>
           </li>
           <li>
@@ -63,11 +62,10 @@
               <img
                 src="assets/images/icon-reaction.svg"
                 alt="Icon relevant of the score"
-              />
+              /><span>Reaction</span>
             </div>
             <div class="numeral">
-              <span><strong>80</strong></span
-              >/100
+              <span><strong>80</strong> </span><span class="light">/ 100</span>
             </div>
           </li>
         </ul>
