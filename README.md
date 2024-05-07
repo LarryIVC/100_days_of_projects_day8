@@ -1,11 +1,11 @@
 <div align="center" style="text-align: center">
-<img src = "./images/logo.webp" height="64" width="auto">
-  <h1><b>PROY05: Product Preview Card Component - 100daysofprojects<b></h1>
+<img src = "./assets/images/logo.webp" height="64" width="auto">
+  <h1><b>PROY06: Results Summary Component<b></h1>
 </div>
 
-[PROY05: Product Preview Card Component] construido con `HTML`, `CSS`, para mejorar nuestras habilidades de codificación. Este proyecto es el quinto de los desafios #100daysofprojects promovido por [Frontend Club](https://www.facebook.com/frontendclubfb).
+[PROY06: Results Summary Component] construido con `HTML`, `CSS` y `JavaScript` para mejorar nuestras habilidades de codificación. Este proyecto es el sexto de los desafios #100daysofprojects promovido por [Frontend Club](https://www.facebook.com/frontendclubfb).
 
-![Screenshot](images/screenshoot.webp)
+![Screenshot](./assets/images/screenshoot.webp)
 
 ### Tabla de contenidos
 
@@ -24,30 +24,31 @@
 
 ### El desafio
 
-Crear una tarjeta de información de producto, usando `HTML` y `CSS`, y lograr que se parezca lo más posible al diseño.
+Crear un componente resumen de resultados, usando `HTML` y `CSS`, y lograr que se parezca lo más posible al diseño.
 
 ### Los usuarios deberían poder:
 
 1. Ver el diseño óptimo en pantallas `grandes(1200px)` y `pequeñas(375px)`.
-2. Ver un `color diferente (hover)` al pasar el mouse sobre el `botón`.
+2. Ver un color de fondo `gradiente(hover)` al pasar el mouse sobre el botón.
+3. `Bonus`: Muestra los datos en el diseño desde un archivo JSON JavaScript
 
 
 ### Importante:
 
 1. Agrega icono `favicon` al proyecto.
-2. Agrega una `URL` fácil de recordar (ej. `05-product-preview-card-component`).
-3. Agrega un `título` al proyecto (ej. `Product Preview Card Component - Frontend Club`).
+2. Agrega una `URL` fácil de recordar (ej. `06-results-summary-component`).
+3. Agrega un `título` al proyecto (ej. `Results Summary Component - Frontend Club`).
 4. **Bonus**: Agrega un archivo `README.md` al proyecto.
 
 
 ### Capturas
 
-![Captura](images/mockup.webp)
+![Captura](./assets/images/mockup.webp)
 
 ### Enlaces
 
-- [Proyecto](https://05-product-preview-card-larry.netlify.app/)
-- [Repositorio](https://github.com/LarryIVC/100_days_of_projects_day5)
+- [Proyecto](https://06-results-summary-component-larry.netlify.app/)
+- [Repositorio](https://github.com/LarryIVC/100_days_of_projects_day8)
 
 ## Flujo de trabajo
 
@@ -58,16 +59,22 @@ Crear una tarjeta de información de producto, usando `HTML` y `CSS`, y lograr q
 ```txt
 /
 📂
-├── 📂css/│ 
+├── 📂assets/
+│ └── 📂fonts/
+│   └── HankenGrotesk-VariableFont_wght.ttf
+│ └── 📂images/
+│   └── favicon-32x32.png
+│   └── icon-memory.svg
+│   └── icon-reaction.svg
+│   └── icon-verbal.svg
+│   └── icon-visual.svg
+│   └── logo.webp
+│   └── mockup.webp
+│   └── scrrenshoot.webp
+├── 📂css/
 │ └── styles.css
-├── 📂images/
-│ └── favicon-32x32.png
-│ └── icon-cart.svg
-│ └── image-product-desktop.jpg
-│ └── image-product-mobile.jpg
-│ └── logo.webp
-│ └── mockup.webp
-│ └── scrrenshoot.webp
+├── 📂js/
+│ └── index.js
 └── index.html
 └── LICENSE
 └── README.md
@@ -79,6 +86,7 @@ Crear una tarjeta de información de producto, usando `HTML` y `CSS`, y lograr q
 2. Estilos `CSS`
 3. `Git` y `GitHub`
 4. `Netlify`
+5. `JavaScript`
 
 **Flujo de desarrollo**
 
@@ -104,27 +112,47 @@ Etiquetas `meta` para el SEO.
 <meta name="author" content="Larry Villegas Costas" />
 <meta
   name="title"
-  content="PROY05: Product Preview Card Component - Larry Villegas Costas - Frontend Club"
+  content="PROY06: Results Summary Component - Larry Villegas Costas - Frontend Club"
 />
 <meta
   name="description"
-  content="PROY05: Product Preview Card Component - Larry Villegas Costas - Frontend Club"
+  content="PROY06: Results Summary Component - Larry Villegas Costas - Frontend Club"
 />
-<link rel="stylesheet" href="css/styles.css" />
-<link
-  rel="icon"
-  type="image/png"
-  href="./images/favicon-32x32.png"
-  sizes="32x32"
-/>
-<title>PROY05: Product Preview Card Component - Frontend Club</title>
+<title>Results Summary Component - Frontend Club</title>
 ```
 
 Animaciones CSS.
 
 ```css
-button:hover {
-  background: #1a4031;
+.summary-container > button:hover {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+```
+
+JavaScript para cargar datos desde un archivo JSON.
+
+```js
+function main() {
+  window.addEventListener("load", () => {
+    const list = document.getElementById("summary-list")
+    let html = ""
+    data.forEach((item) => {
+      html += `
+      <li style="background: ${item.bg};">
+      <div class="literal">
+        <img
+          src=${item.icon}
+          alt="Icon relevant of the score ${item.category}"
+        /><span style="color: ${item.color};">${item.category}</span>
+      </div>
+      <div class="numeral">
+        <span><strong>${item.score}</strong> </span><span class="light">/ 100</span>
+      </div>
+    </li>`
+    })
+    console.log(html)
+    list.innerHTML = html
+  })
 }
 ```
 
